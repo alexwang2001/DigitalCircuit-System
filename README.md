@@ -4,4 +4,5 @@
 <p> HW01/ Code <p>
 <p> HW02/ Code <p>
 <p> HW03/ Code <p>
+<p> HW04/ Pattern <p>
 <p> HW05/ Pattern <p>
