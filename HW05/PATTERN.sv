@@ -174,6 +174,15 @@ task check_reset();
     $display ("-------------------------------------------------------------------------------");
     $finish;
   end
+  @(posedge clk);
+  if(out_data !== 0 || out_valid !== 0) begin
+    fail();
+    $display ("-------------------------------------------------------------------------------");
+    $display ("                                 FAIL!                                         ");
+    $display ("                       out should be 0 after initial RESET                     ");
+    $display ("-------------------------------------------------------------------------------");
+    $finish;
+  end
 endtask
 
 task overtime();
