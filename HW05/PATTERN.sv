@@ -166,6 +166,7 @@ task reset();
 endtask
 
 task check_reset();
+  @(posedge clk);
   if(out_data !== 0 || out_valid !== 0) begin
     fail();
     $display ("-------------------------------------------------------------------------------");
