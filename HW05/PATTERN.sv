@@ -1,4 +1,4 @@
-`define CYCLE_TIME 6.0
+`define CYCLE_TIME 2.6
 
 module PATTERN(
   // Input signals
@@ -79,13 +79,14 @@ initial begin
       image_valid = 1;
       in_data = golden_in[j];
     end
-    @(negedge clk)
+    @(negedge clk);
     image_valid = 0;
     in_data = 'x;
+	@(negedge out_valid);
     $display("pass pattern %5d", patcount);
     @(negedge clk);
   end
-  @(negedge out_valid);
+  @(negedge clk);
   YOU_PASS_task();
 end
 
@@ -248,7 +249,7 @@ $display ("---------------------------------------------------------------------
 $display ("                                                  Congratulations!                						             ");
 $display ("                                           You have passed all patterns!          						             ");
 $display ("                                                Your total cycle:%d!                                                          ",total_cycles);
-$display ("                                          Your total simulation time:%d ns!                                                          ",total_cycles* CYCLE);
+$display ("                                          Your total simulation time:%d ns!                                                          ",(total_cycles) * CYCLE);
 $display ("----------------------------------------------------------------------------------------------------------------------");
 $finish;	
 end endtask
