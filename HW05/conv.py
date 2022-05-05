@@ -69,7 +69,7 @@ def custom(convx, convy, pic, check = 0):
 def auto(check = 0):
     convx = np.random.randint(-8, 8, 5, dtype=int)
     convy = np.random.randint(-8, 8, 5, dtype=int)
-    pic = np.random.randint(-8, 7, [8, 8], dtype=int)
+    pic = np.random.randint(-8, 8, [8, 8], dtype=int)
     c1 = np.zeros([8, 4], dtype=int)
     c2 = np.zeros([4, 4], dtype=int)
     for i in range(8):
