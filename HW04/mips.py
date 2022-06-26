@@ -37,8 +37,8 @@ def bit_not(n, numbits=32):
 
 def NOP():
     #in
-    inf.write("00000000000000000000000000000000 ");
-    inf.write("10001100011000110001\n");
+    inf.write("00000000000000000000000000000000 ")
+    inf.write("10001100011000110001\n")
     #out
     outf.write("1 ")
     outf.write("{0:10d} ".format(0))

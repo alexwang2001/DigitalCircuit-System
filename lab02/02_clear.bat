@@ -1,0 +1,2 @@
+del *.out
+del *.vcd

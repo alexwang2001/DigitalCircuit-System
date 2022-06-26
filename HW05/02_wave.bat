@@ -1,0 +1,2 @@
+
+gtkwave wave.vcd

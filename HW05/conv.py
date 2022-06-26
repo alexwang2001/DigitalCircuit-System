@@ -69,7 +69,7 @@ def custom(convx, convy, pic, check = 0):
 def auto(check = 0):
     convx = np.random.randint(-8, 8, 5, dtype=int)
     convy = np.random.randint(-8, 8, 5, dtype=int)
-    pic = np.random.randint(-8, 8, [8, 8], dtype=int)
+    pic = np.random.randint(-8, 7, [8, 8], dtype=int)
     c1 = np.zeros([8, 4], dtype=int)
     c2 = np.zeros([4, 4], dtype=int)
     for i in range(8):
@@ -98,7 +98,7 @@ def auto(check = 0):
 # --------------------------------------------------
 # if check = 1: print the data after first convolution
 # default: check = 0
-inf.write("100\n\n")
+inf.write("500\n\n")
 # pat1
 custom(cvx, cvy, input, check = 0)
 # pat2
@@ -119,7 +119,7 @@ auto()
 auto()
 auto()
 auto()
-for i in range(90):
+for i in range(490):
     auto()
 
 # close file
